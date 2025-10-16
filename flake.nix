@@ -8,8 +8,27 @@
 
   outputs = inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake{inherit inputs;}(
-      top@{config, withSystem, moduleWithSystem, ...}:{
-    
+      top@{allSystems, config, withSystem, moduleWithSystem, ...}:{
+        imports = [
+          inputs.flake-parts.flakeModules.modules
+        ];
+
+        allSystems = {
+          imports = [
+            ./modules            
+            ./style
+            ./config
+          ];
+        };
+
+        withSystem = {
+        };
+
+        moduleWithSystem = {
+          
+        };
+
+        
       }
     );
 }
