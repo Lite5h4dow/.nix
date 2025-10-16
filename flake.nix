@@ -6,16 +6,24 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = inputs@{ flake-parts, ... }:
-    flake-parts.lib.mkFlake{inherit inputs;}(
-      top@{allSystems, config, withSystem, moduleWithSystem, ...}:{
+  outputs =
+    inputs@{ flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } (
+      top@{
+        allSystems,
+        config,
+        withSystem,
+        moduleWithSystem,
+        ...
+      }:
+      {
         imports = [
           inputs.flake-parts.flakeModules.modules
         ];
 
         allSystems = {
           imports = [
-            ./modules            
+            ./modules
             ./style
             ./config
           ];
@@ -25,10 +33,9 @@
         };
 
         moduleWithSystem = {
-          
+
         };
 
-        
       }
     );
 }

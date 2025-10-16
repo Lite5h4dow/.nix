@@ -1,28 +1,35 @@
-{...}:{
+{ ... }:
+{
   config = {
-    nix= {
-      package = packages.lix;
+    nix = {
+      # package = packages.lix;
 
       settings = {
         accept-flake-config = true;
 
         warn-dirty = true;
-        trusted-users = ["root" "@wheel"];
+        trusted-users = [
+          "root"
+          "@wheel"
+        ];
 
         auto-optimise-store = true;
         builders-use-substitutes = true;
 
-        experimental-features = ["nix-command" "flakes"];
+        experimental-features = [
+          "nix-command"
+          "flakes"
+        ];
         log-lines = 30;
         http-connections = 50;
 
-        substituters=[
+        substituters = [
           "https://cache.nixos.org/"
         ];
         extra-substituters = [
           "https://hyprland.cachix.org"
         ];
-        extra-trusted-substituters=[
+        extra-trusted-substituters = [
           "https://hyprland.cachix.org"
           "https://nix-community.cachix.org"
         ];
@@ -35,19 +42,19 @@
         ];
       };
 
-      registry = {
-        nixpkgs.flake = nixpkgs;
-        n.flake = nixpkgs;
-        default.flake = nixpkgs;
-      };
+      # registry = {
+      #   nixpkgs.flake = nixpkgs;
+      #   n.flake = nixpkgs;
+      #   default.flake = nixpkgs;
+      # };
 
       channel.enable = false;
 
-      nixPath = [
-        "nixpkgs=${nixpkgsPath}"
-        "n=${nixpkgsPath}"
-        "default=${nixpkgsPath}"
-      ];
+      # nixPath = [
+      #   "nixpkgs=${nixpkgsPath}"
+      #   "n=${nixpkgsPath}"
+      #   "default=${nixpkgsPath}"
+      # ];
     };
   };
 }
