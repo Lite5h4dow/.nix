@@ -1,41 +1,54 @@
 {
-  description = "A very basic flake";
+  description = "Description for the project";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    hosts = {
+      url = "https://git.litelot.us/litelotus/.nix-hosts.git";
+    };
+    home = {
+      url = "https://git.litelot.us/litelotus/.nix-home";
+    };
+    images = {
+      url = "https://git.litelot.us/litelotus/.nix-images.git";
+    };
+    devshells = {
+      url = "https://git.litelot.us/litelotus/.nix-devshells.git";
+    };
+    templates = {
+      url = "https://git.litelot.us/litelotus/.nix-templates.git";
+    };
   };
 
-  outputs =
-    inputs@{ flake-parts, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } (
-      top@{
-        allSystems,
-        config,
-        withSystem,
-        moduleWithSystem,
-        ...
-      }:
-      {
-        imports = [
-          inputs.flake-parts.flakeModules.modules
-        ];
+  outputs = inputs@{ flake-parts, hosts, home, images, devshells, templates, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        # To import an internal flake module: ./other.nix
+        # To import an external flake module:
+        #   1. Add foo to inputs
+        #   2. Add foo as a parameter to the outputs function
+        #   3. Add here: foo.flakeModule
+        hosts
+        home
+        images
+        devshells
+        templates
+      ];
+      systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin" ];
+      perSystem = { config, self', inputs', pkgs, system, ... }: {
+        # Per-system attributes can be defined here. The self' and inputs'
+        # module parameters provide easy access to attributes of the same
+        # system.
 
-        allSystems = {
-          imports = [
-            ./modules
-            ./style
-            ./config
-          ];
-        };
+        # Equivalent to  inputs'.nixpkgs.legacyPackages.hello;
+        packages.default = pkgs.hello;
+      };
+      flake = {
+        # The usual flake attributes can be defined here, including system-
+        # agnostic ones like nixosModule and system-enumerating ones, although
+        # those are more easily expressed in perSystem.
 
-        withSystem = {
-        };
-
-        moduleWithSystem = {
-
-        };
-
-      }
-    );
+      };
+    };
 }
