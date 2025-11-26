@@ -10,7 +10,7 @@
       pkgs = import inputs.nixpkgs { system = "aarch64-linux"; };
       modules = [
         config.flake.modules.nixOnDroid.base
-        {system.stateVersion = "25.05"; }
+        {system.stateVersion = "24.05"; }
       ];
     };
   };
