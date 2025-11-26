@@ -32,6 +32,10 @@
       };
     };
     import-tree.url = "github:vic/import-tree";
+    tinted-schemes = {
+      flake = false;
+      url = "github:tinted-theming/schemes";
+    };
   };
 
   outputs =
