@@ -36,6 +36,6 @@ in
 {
   flake.modules = {
     nixos.base = polyModule;
-    # nixOnDroid.base = polyModule;
+    nixOnDroid.base = polyModule;
   };
 }
