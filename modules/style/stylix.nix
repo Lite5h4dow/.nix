@@ -15,7 +15,7 @@
     };
 
     nixOnDroid.base = {
-      imports = [ inputs.stylix.NixOnDroidModules.stylix ];
+      imports = [ inputs.stylix.nixOnDroidModules.stylix ];
       stylix.enable = true;
     };
   };
