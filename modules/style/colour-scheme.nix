@@ -1,10 +1,9 @@
 { inputs, lib, ... }:
 let
-  scheme = {pkgs, ...}:pkgs.base16-schemes + /share/themes/catppuccin-macchiato.yaml;
-  polyModule =
+  polyModule = {pkgs, ...}:
     {
       stylix = lib.mkDefault {
-        base16Scheme = scheme;
+        base16Scheme = pkgs.base16-schemes + /share/themes/catppuccin-macchiato.yaml;
         polarity = "dark";
       };
     };
