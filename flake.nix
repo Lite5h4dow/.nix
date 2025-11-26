@@ -4,7 +4,7 @@
   nixConfig = {
     abort-on-warn = false;
     extra-experimental-features = [ "pipe-operators" ];
-    allow-import-from-derivation = false;
+    # allow-import-from-derivation = false;
   };
 
   inputs = {
