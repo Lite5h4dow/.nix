@@ -1,9 +1,9 @@
-{ config, ... }:
+{ lib, config, ... }:
 {
   flake.modules.homeManager.base = args: {
     home = {
-      username = config.flake.meta.username;
-      homeDirectory = "/home/${config.flake.meta.username}";
+      username = lib.mkDefault config.flake.meta.username;
+      homeDirectory = lib.mkDefault "/home/${config.flake.meta.username}";
     };
     programs.home-manager.enable = true;
   };
