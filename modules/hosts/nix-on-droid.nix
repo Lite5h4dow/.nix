@@ -5,11 +5,10 @@
   ...
 }:
 {
-  flake.nixOnDroidConfigurations = lib.mapAttrs' (name: module: {
-    inherit name;
-    value = inputs.nix-on-droid.lib.nixOnDroidConfiguration {
+  flake.nixOnDroidConfigurations = {
+    "base" = inputs.nix-on-droid.lib.nixOnDroidConfiguration {
       pkgs = import inputs.nixpkgs { system = "aarch64-linux"; };
-      modules = [ module ];
+      modules = [ config.flake.module.nixOnDroid.base ];
     };
-  }) config.flake.modules.nixOnDroid or { };
+  };
 }
