@@ -9,7 +9,7 @@
       };
     };
 
-    homeManager.workstation = {
+    homeManager.base= {
       imports = [ inputs.stylix.homeModules.stylix ];
       stylix.enable = true;
     };
