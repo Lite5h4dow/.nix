@@ -1,9 +1,10 @@
 { inputs, lib, ...}:
 let
-  polyModule.stylix = lib.mkDefault ({pkgs, ...}: {
+  polyModule.stylix = {pkgs,...}:
+  {
     base16scheme = pkgs.base16-schemes + /share/themes/catppuccin-macchiato.yaml;
     polarity = "dark";
-  });
+  };
 in
 {
   flake.modules = {
