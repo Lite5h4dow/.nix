@@ -30,7 +30,6 @@ let
         };
       };
 
-      fonts.fontconfig.enable = true;
     };
 in
 {
