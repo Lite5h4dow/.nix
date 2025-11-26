@@ -6,8 +6,8 @@ let
 in
 {
   flake.modules = {
-    nixos.pc = polyModule;
-    homeManager.gui = polyModule;
+    nixos.base = polyModule;
+    homeManager.workstation = polyModule;
     # nixOnDroid.base = polyModule;
   };
 }
