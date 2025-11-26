@@ -1,6 +1,12 @@
 {
   description = "Description for the project";
 
+  nixConfig = {
+    abort-on-warn = false;
+    extra-experimental-features = [ "pipe-operators" ];
+    allow-import-from-derivation = false;
+  };
+
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
@@ -18,8 +24,10 @@
     import-tree.url = "github:vic/import-tree";
   };
 
-  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-    imports = [(inputs.import-tree ./modules)];
-    _module.args.rootPath = ./. ;
-  };
+  outputs =
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [ (inputs.import-tree ./modules) ];
+      _module.args.rootPath = ./.;
+    };
 }
