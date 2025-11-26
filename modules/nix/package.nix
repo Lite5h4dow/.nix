@@ -3,14 +3,7 @@ let
   polyModule =
     { pkgs, ... }:
     {
-      nix.package =
-        pkgs.nixVersions
-        |> lib.attrNames
-        |> lib.filter (lib.hasPrefix "nix_")
-        |> lib.naturalSort
-        |> lib.last
-        |> lib.flip lib.getAttr pkgs.nixVersions
-        |> lib.mkDefault;
+      nix.package =lib.mkDefault (lib.flip lib.getAttr pkgs.nixVersions(lib.last(lib.naturalSort(lib.filter (lib.hasPrefix "nix_") (lib.attrNames(pkgs.nixVersions))))));
     };
 in
 {
