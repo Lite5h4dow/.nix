@@ -3,7 +3,7 @@ let
   polyModule =
     { pkgs, ... }:
     {
-      stylix = {
+      stylix = lib.mkDefault {
         base16scheme = pkgs.base16-schemes + /share/themes/catppuccin-macchiato.yaml;
         polarity = "dark";
       };
