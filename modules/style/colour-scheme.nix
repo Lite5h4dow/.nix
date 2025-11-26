@@ -4,19 +4,15 @@ let
   polyModule =
     {
       stylix = lib.mkDefault {
-        base16scheme = scheme;
+        base16Scheme = scheme;
         polarity = "dark";
       };
     };
-
-  nodModule = {
-    base16 = scheme;
-  };
 in
 {
   flake.modules = {
     nixos.base = polyModule;
     homeManager.workstation = polyModule;
-    nixOnDroid.base = nodModule;
+    nixOnDroid.base = polyModule;
   };
 }
