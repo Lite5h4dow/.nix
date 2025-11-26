@@ -20,7 +20,7 @@
       inputs.home-manager.follows = "home-manager";
     };
     hyprshell.url = "github:H3rmt/hyprshell";
-    stylix.url = "github:nix-community/stylix";
+    stylix.url = "github:nix-community/stylix/release-25.05";
     import-tree.url = "github:vic/import-tree";
   };
 
