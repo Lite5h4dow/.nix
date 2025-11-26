@@ -13,6 +13,6 @@ in
   flake.modules = {
     nixos.base = polyModule;
     homeManager.base = polyModule;
-    nixOnDroid.base = polyModule;
+    # nixOnDroid.base = polyModule;
   };
 }
