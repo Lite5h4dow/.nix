@@ -1,6 +1,7 @@
 {
   flake.modules.nixOnDroid.base = {pkgs,...}:{
     environment.packages = with pkgs; [
+      openssh
       ncurses
     ];
   };
