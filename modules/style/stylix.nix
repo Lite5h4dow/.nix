@@ -9,17 +9,17 @@
       };
     };
 
-    homeManager.base= {
-      imports = [ inputs.stylix.homeModules.stylix ];
-      stylix.enable = true;
-    };
+    # homeManager.base= {
+    #   imports = [ inputs.stylix.homeModules.stylix ];
+    #   stylix.enable = true;
+    # };
 
-    nixOnDroid.base = {
-      imports = [ inputs.stylix.nixOnDroidModules.stylix ];
-      stylix = {
-        enable = true;
-        homeManagerIntegration.autoImport = false;
-      };
-    };
+    # nixOnDroid.base = {
+    #   imports = [ inputs.stylix.nixOnDroidModules.stylix ];
+    #   stylix = {
+    #     enable = true;
+    #     homeManagerIntegration.autoImport = false;
+    #   };
+    # };
   };
 }
