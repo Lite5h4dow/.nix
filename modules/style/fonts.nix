@@ -35,6 +35,7 @@ in
 {
   flake.modules = {
     nixos.base = polyModule;
+    homeManager.style = polyModule;
     # nixOnDroid.base = polyModule;
   };
 }

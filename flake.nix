@@ -23,6 +23,12 @@
         home-manager.follows = "home-manager";
       };
     };
+    nixos-wsl={
+      url = "github:nix-community/NixOS-WSL/main";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     hyprshell.url = "github:H3rmt/hyprshell";
     stylix = {
       url = "github:nix-community/stylix/release-25.11";
@@ -35,6 +41,9 @@
     tinted-schemes = {
       flake = false;
       url = "github:tinted-theming/schemes";
+    };
+    vscode-server= {
+      url = "github:nix-community/nixos-vscode-server";
     };
   };
 
