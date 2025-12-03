@@ -22,15 +22,13 @@
       stylix.targets.gnome.enable = false;
     };
 
-    # nixOnDroid.base = {
-    #   imports = [
-    #     inputs.stylix.nixOnDroidModules.stylix
-    #     inputs.stylix.homeModules.stylix
-    #   ];
-    #   stylix = {
-    #     enable = true;
-    #     homeManagerIntegration.autoImport = false;
-    #   };
-    # };
+    nixOnDroid.base = {
+      imports = [
+        inputs.stylix.nixOnDroidModules.stylix
+      ];
+      stylix = {
+        enable = true;
+      };
+    };
   };
 }
