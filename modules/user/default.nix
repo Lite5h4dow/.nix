@@ -7,7 +7,7 @@
   flake.modules.nixos.base = {
     users.users.${config.flake.meta.user.name} = {
       isNormalUser = true;
-      extraGroups = ["wheel"];
+      extraGroups = ["wheel" "dialout"];
     };
   };
 }
