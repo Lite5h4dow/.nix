@@ -1,21 +1,21 @@
 { inputs, lib, ... }:
-let
-  module' = {
-    imports = [
-      inputs.stylix.homeModules.stylix
-    ];
-    stylix.enable = true;
-  };
-in
 {
   flake.modules = {
-    homeManager.style = module';
+    homeManager.style = {
+      imports = [
+        inputs.stylix.homeModules.stylix
+      ];
+      stylix.enable = true;
+
+    };
     nixos.base = {
       imports = [
-        module'
         inputs.stylix.nixosModules.stylix
       ];
-      stylix.homeManagerIntegration.autoImport = false;
+      stylix = {
+        enable = true;
+        homeManagerIntegration.autoImport = false;
+      };
     };
     nixos.wsl = {
       stylix.targets.gnome.enable = false;
