@@ -17,7 +17,9 @@ in
       ];
       homeManagerIntegration.autoImport = false;
     };
-    nixos.wsl.stylix.autoEnable = false;
+    nixos.wsl = {
+      stylix.targets.gnome.enable = false;
+    };
 
     # nixOnDroid.base = {
     #   imports = [
