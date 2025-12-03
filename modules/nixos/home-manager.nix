@@ -6,7 +6,7 @@
       useGlobalPkgs = true;
       useUserPackages = true;
       extraSpecialArgs.hasGlobalPkgs = true;
-      users.${config.flake.meta.user.name} = {
+      users.${args.config.flake.meta.user.name} = {
         home.stateVersion = args.config.system.stateVersion;
         imports = [ config.flake.modules.homeManager.base ];
       };
