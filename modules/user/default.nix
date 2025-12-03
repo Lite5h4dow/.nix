@@ -1,6 +1,6 @@
-{ config, lib, ... }:
+{ ... }:
 {
-  flake.modules.meta.user = {
-    name = lib.mkDefault "lotus";
+  flake.meta.user = {
+    name = "lotus";
   };
 }
