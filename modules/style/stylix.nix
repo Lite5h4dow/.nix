@@ -15,6 +15,7 @@ in
         module'
         inputs.stylix.nixosModules.stylix
       ];
+      homeManagerIntegration.autoImport = false;
     };
     nixos.wsl.stylix.autoEnable = false;
 
