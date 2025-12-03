@@ -1,20 +1,16 @@
 { inputs, lib, ... }:
+let
+  module' = {
+    imports = [
+      inputs.stylix.homeModules.stylix
+    ];
+    stylix.enable = true;
+  };
+in
 {
   flake.modules = {
-    homeManager.style = {
-      imports = [
-        inputs.stylix.homeModules.stylix
-      ];
-      stylix.enable = true;
-    };
-    nixos.base = {
-      imports = [
-        inputs.stylix.homeModules.stylix
-      ];
-      stylix = {
-        enable = true;
-      };
-    };
+    homeManager.style = module';
+    nixos.base = module';
 
     # nixOnDroid.base = {
     #   imports = [
