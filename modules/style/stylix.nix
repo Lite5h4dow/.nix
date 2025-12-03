@@ -11,6 +11,7 @@ in
   flake.modules = {
     homeManager.style = module';
     nixos.base = module';
+    nixos.wsl.stylix.autoEnable = false;
 
     # nixOnDroid.base = {
     #   imports = [
