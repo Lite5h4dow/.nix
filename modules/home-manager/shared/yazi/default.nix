@@ -4,6 +4,7 @@
   {
       programs.yazi = {
         enable = true;
+        enableFishIntegration = true;
         plugins = {
           inherit (pkgs.yaziPlugins)
             git
