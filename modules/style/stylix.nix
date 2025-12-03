@@ -6,6 +6,7 @@
         inputs.stylix.homeModules.stylix
       ];
       stylix.enable = true;
+        homeManagerIntegration.autoImport = false;
     };
     nixos.base = {
       imports = [
@@ -14,7 +15,7 @@
       ];
       stylix = {
         enable = true;
-        homeManagerIntegration.autoImport = false;
+        # homeManagerIntegration.autoImport = false;
       };
     };
 
