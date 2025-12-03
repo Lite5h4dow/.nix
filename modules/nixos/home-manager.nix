@@ -9,6 +9,7 @@ in
       useGlobalPkgs = true;
       useUserPackages = true;
       extraSpecialArgs.hasGlobalPkgs = true;
+      backupFileExtension = ".bak";
       users.${username} = {
         home.stateVersion = args.config.system.stateVersion;
         imports = [ config.flake.modules.homeManager.base ];
