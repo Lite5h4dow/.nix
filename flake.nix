@@ -12,9 +12,11 @@
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
     };
+
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-25.11";
     };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs = {
@@ -30,7 +32,7 @@
       };
     };
 
-    nixos-wsl={
+    nixos-wsl = {
       url = "github:nix-community/NixOS-WSL/release-25.11";
       inputs = {
         nixpkgs.follows = "nixpkgs";
@@ -66,8 +68,13 @@
       url = "github:tinted-theming/schemes";
     };
 
-    vscode-server= {
+    vscode-server = {
       url = "github:nix-community/nixos-vscode-server";
+    };
+
+    curd = {
+      url = "github:Wraient/curd";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
