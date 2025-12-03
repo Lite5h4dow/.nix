@@ -7,12 +7,6 @@ let
     ];
     services.vscode-server = {
       enable = true;
-      enableFHS = true;
-      enableRuntimeDependencies = with pkgs; [
-        curl
-        icu
-        wget
-      ];
     };
   };
 in
