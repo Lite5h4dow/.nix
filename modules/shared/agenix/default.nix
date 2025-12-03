@@ -1,10 +1,10 @@
 { inputs, ...}:
 {
   flake.modules = {
-    nixos.base = {system, ...}:{
+    nixos.base = {pkgs, ...}:{
       imports = [inputs.agenix.nixosModules.default];
       environment.systemPackages = [
-        inputs.agenix.${system}.default
+        inputs.agenix.${pkgs.system}.default
       ];
     };
   };
