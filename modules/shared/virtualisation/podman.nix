@@ -1,9 +1,9 @@
-{ ... }:
+{ lib, ... }:
 let
   module' = {
     virtualisation = {
       podman = {
-        enable = true;
+        enable = lib.mkDefault true;
       };
       oci-containers.backend = "podman";
     };

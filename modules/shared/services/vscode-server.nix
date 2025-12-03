@@ -19,7 +19,7 @@ in
 {
 
   flake.modules = {
-    # nixos.wsl = module';
+    nixos.wsl = module';
     # nixOnDroid.default = module';
   };
 }
