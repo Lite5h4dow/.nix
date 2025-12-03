@@ -1,4 +1,4 @@
-{lib, config, ...}:
+{ lib, config, ... }:
 {
   options.nix.settings = lib.mkOption {
     type = lib.types.lazyAttrsOf lib.types.anything;
@@ -14,15 +14,18 @@
       ];
       extra-system-features = [ "recursive-nix" ];
       accept-flake-config = true;
-      trusted-users = ["root" "@wheel"];
+      trusted-users = [
+        "root"
+        "@wheel"
+      ];
 
-      substituters=[
+      substituters = [
         "https://cache.nixos.org/"
       ];
       extra-substituters = [
         "https://hyprland.cachix.org"
       ];
-      extra-trusted-substituters=[
+      extra-trusted-substituters = [
         "https://hyprland.cachix.org"
         "https://nix-community.cachix.org"
       ];
@@ -42,7 +45,11 @@
       homeManager.base.nix = {
         inherit (config.nix) settings;
       };
-      nixOnDroid.base.nix.extraOptions =  lib.concatLines (lib.mapAttrsToList (name: value: "${name} = ${toString value}") config.nix.settings);
+      nixOnDroid.base.nix = {
+        extraOptions = lib.concatLines (
+          lib.mapAttrsToList (name: value: "${name} = ${toString value}") config.nix.settings
+        );
+      };
     };
   };
 }
