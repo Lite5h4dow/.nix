@@ -2,7 +2,7 @@
   description = "Description for the project";
 
   nixConfig = {
-    warn-dity = false;
+    warn-dirty = false;
     abort-on-warn = false;
     extra-experimental-features = [ "pipe-operators" ];
     # allow-import-from-derivation = false;
