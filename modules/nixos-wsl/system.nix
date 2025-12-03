@@ -12,9 +12,7 @@
         register = false;
       };
 
-      wslConf = {
-        user.default = config.flake.meta.user.name;
-      };
+      defaultUser = config.flake.meta.user.name;
     };
   };
 }
