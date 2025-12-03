@@ -8,14 +8,19 @@
   };
 
   inputs = {
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+    };
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixos-25.11";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };
     };
+
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
       inputs = {
@@ -23,13 +28,18 @@
         home-manager.follows = "home-manager";
       };
     };
+
     nixos-wsl={
       url = "github:nix-community/NixOS-WSL/release-25.11";
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };
     };
-    hyprshell.url = "github:H3rmt/hyprshell";
+
+    hyprshell = {
+      url = "github:H3rmt/hyprshell";
+    };
+
     stylix = {
       url = "github:nix-community/stylix/release-25.11";
       inputs = {
@@ -37,11 +47,20 @@
         flake-parts.follows = "flake-parts";
       };
     };
-    import-tree.url = "github:vic/import-tree";
+
+    agenix = {
+      url = "github:ryantm/agenix";
+    };
+
+    import-tree = {
+      url = "github:vic/import-tree";
+    };
+
     tinted-schemes = {
       flake = false;
       url = "github:tinted-theming/schemes";
     };
+
     vscode-server= {
       url = "github:nix-community/nixos-vscode-server";
     };
