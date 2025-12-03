@@ -1,4 +1,4 @@
-{inputs, ...}:
+# {inputs, ...}:
 let
   module' = {pkgs, ...}:
   {
@@ -14,12 +14,12 @@ let
   };
 in
 {
-  imports = [
-    inputs.vscode-server.nixosModules.default
-  ];
+  # imports = [
+  #   inputs.vscode-server.nixosModules.default
+  # ];
 
   flake.modules = {
-    nixos.wsl = module';
-    nixOnDroid.default = module';
+    # nixos.wsl = module';
+    # nixOnDroid.default = module';
   };
 }
