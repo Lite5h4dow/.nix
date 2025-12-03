@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.modules.homeManager.base = { pkgs }:
+  flake.modules.homeManager.base = { pkgs, ... }:
   {
       programs.yazi = {
         enable = true;
