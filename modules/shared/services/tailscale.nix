@@ -8,7 +8,7 @@ let
   };
 in
 {
-  fake.modules = {
+  flake.modules = {
     nixos.base = module';
   };
 }
