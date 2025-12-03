@@ -15,7 +15,7 @@ in
         module'
         inputs.stylix.nixosModules.stylix
       ];
-      homeManagerIntegration.autoImport = false;
+      stylix.homeManagerIntegration.autoImport = false;
     };
     nixos.wsl = {
       stylix.targets.gnome.enable = false;

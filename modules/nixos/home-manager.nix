@@ -1,4 +1,4 @@
-{config, ...}:
+{ config, ... }:
 {
   flake.modules.nixos.base = args: {
     home-manager = {
@@ -7,7 +7,7 @@
       extraSpecialArgs.hasGlobalPkgs = true;
       config = {
         home.stateVersion = args.config.system.stateVersion;
-        imports = [config.flake.modules.homeManager.base];
+        imports = [ config.flake.modules.homeManager.base ];
       };
     };
   };
