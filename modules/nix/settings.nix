@@ -13,8 +13,6 @@
         "recursive-nix"
       ];
       extra-system-features = [ "recursive-nix" ];
-
-      warn-dirty = false;
       accept-flake-config = true;
       trusted-users = ["root" "@wheel"];
 
