@@ -14,7 +14,7 @@
       ];
       stylix = {
         enable = true;
-        homeManagerIntegration.autoImport = false;
+        # homeManagerIntegration.autoImport = false;
       };
     };
     nixos.wsl = {
