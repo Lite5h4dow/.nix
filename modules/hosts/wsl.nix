@@ -1,7 +1,7 @@
-{ lib, inputs, config, ... }:
+{ inputs, config, ... }:
 {
   flake.nixosConfigurations = {
-    "wsl" = lib.nixosSystem{
+    "wsl" = inputs.nixpkgs.nixosSystem{
       system = "x86_64-linux";
       pkgs = import inputs.nixpkgs {
         system = "x86_64-linux";
