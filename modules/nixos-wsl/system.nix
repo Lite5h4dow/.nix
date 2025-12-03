@@ -1,16 +1,16 @@
 { inputs, config, ... }:
 {
   imports = [ inputs.nixos-wsl.nixosModules.default ];
-  flake.modulesnixos.wsl = {
+  flake.modules.nixos.wsl = {
     wsl = {
       enable = true;
 
-      useWindowsDriver = true;
+      # useWindowsDriver = true;
 
-      interop = {
-        includePath = true;
-        register = false;
-      };
+      # interop = {
+      #   includePath = true;
+      #   register = false;
+      # };
 
       wslConf = {
         user.default = config.flake.meta.user.name;
