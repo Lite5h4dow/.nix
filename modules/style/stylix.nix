@@ -10,7 +10,12 @@ in
 {
   flake.modules = {
     homeManager.style = module';
-    nixos.base = module';
+    nixos.base = {
+      imports = [
+        module'
+        inputs.stylix.nixosModules.stylix
+      ];
+    };
     nixos.wsl.stylix.autoEnable = false;
 
     # nixOnDroid.base = {
