@@ -1,7 +1,10 @@
-# {inputs, ...}:
+{inputs, ...}:
 let
   module' = {pkgs, ...}:
   {
+    imports = [
+      inputs.vscode-server.nixosModules.default
+    ];
     services.vscode-server = {
       enable = true;
       enableFHS = true;
@@ -14,12 +17,9 @@ let
   };
 in
 {
-  # imports = [
-  #   inputs.vscode-server.nixosModules.default
-  # ];
 
   flake.modules = {
-    # nixos.wsl = module';
+    nixos.wsl = module';
     # nixOnDroid.default = module';
   };
 }
