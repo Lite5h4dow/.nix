@@ -1,23 +1,23 @@
-{ lib, ... }:
+{ ... }:
 let
   polyModule =
     polyArgs@{ pkgs, ... }:
     {
-      stylix.fonts = lib.mkDefault {
+      stylix.fonts = {
 
-        sansSerif = lib.mkDefault {
+        sansSerif = {
           package = pkgs.nerd-fonts.fira-code;
           name = "FiraCode Nerd Font";
         };
 
-        serif = lib.mkDefault polyArgs.config.stylix.fonts.sansSerif;
+        serif = polyArgs.config.stylix.fonts.sansSerif;
 
-        monospace = lib.mkDefault {
+        monospace = {
           package = pkgs.nerd-fonts.fira-mono;
           name = "FiraCode Nerd Font Mono";
         };
 
-        emoji = lib.mkDefault {
+        emoji = {
           package = pkgs.google-fonts;
           name = "Noto Color Emoji";
         };
