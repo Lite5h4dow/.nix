@@ -1,4 +1,7 @@
 { config, inputs, ... }:
+let
+  username = config.flake.meta.user.name;
+in
 {
   flake.modules.nixos.base = args: {
     imports = [ inputs.home-manager.nixosModules.home-manager ];
@@ -6,7 +9,7 @@
       useGlobalPkgs = true;
       useUserPackages = true;
       extraSpecialArgs.hasGlobalPkgs = true;
-      users.${args.config.flake.meta.user.name} = {
+      users.${username} = {
         home.stateVersion = args.config.system.stateVersion;
         imports = [ config.flake.modules.homeManager.base ];
       };
