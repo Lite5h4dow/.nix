@@ -78,6 +78,11 @@
       url = "github:nix-community/nixos-vscode-server";
     };
 
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     curd = {
       url = "github:Wraient/curd";
       inputs.nixpkgs.follows = "nixpkgs";

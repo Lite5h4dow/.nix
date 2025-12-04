@@ -11,8 +11,13 @@
       [
         base
         boot
-        ui
         laptop
+        ui
+        audio
+        wireless
+        bluetooth
+        cpu-intel
+        gpu-nvidia
         { system.stateVersion = "25.11"; }
       ];
   };
