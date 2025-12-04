@@ -17,8 +17,10 @@
         laptop
         ui
         audio
+        input
         wireless
         bluetooth
+        graphics
         cpu-intel
         gpu-intel
         gpu-nvidia
