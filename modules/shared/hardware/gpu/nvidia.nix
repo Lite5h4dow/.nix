@@ -1,9 +1,8 @@
-{ lib, config, ... }:
+{ lib, ... }:
 let
   inherit (lib) mkDefault;
   module' = {
     hardware.nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.latest;
       open = false;
 
       videoAcceleration = mkDefault true;
