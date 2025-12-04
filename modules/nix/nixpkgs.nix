@@ -1,11 +1,3 @@
-{ lib, ...}:
-let
-  inherit (lib) mkDefault;
-in
+{ lib, ... }:
 {
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
 }

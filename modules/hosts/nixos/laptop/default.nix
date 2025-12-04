@@ -2,6 +2,9 @@
 {
   flake.nixosConfigurations."laptop" = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
+    config = {
+      allowUnfree = true;
+    };
     pkgs = import inputs.nixpkgs {
       system = "x86_64-linux";
       stdenv.hostPlatform.system = "x86_64-linux";
