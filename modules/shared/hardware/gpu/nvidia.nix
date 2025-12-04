@@ -1,9 +1,9 @@
-{ lib, ... }:
+{ lib, config, ... }:
 let
   inherit (lib) mkDefault;
   module' = {
     hardware.nvidia = {
-      enable = true;
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
       open = false;
 
       videoAcceleration = mkDefault true;
@@ -12,6 +12,7 @@ let
       dynamicBoost.enable = mkDefault true;
       powerManagement.enable = mkDefault false;
     };
+    services.xserver.videoDrivers = [ "nvidia" ];
   };
 in
 {

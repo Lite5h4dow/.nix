@@ -9,7 +9,7 @@ let
       };
       alsa = {
         enable = mkDefault true;
-        support32bit = mkDefault true;
+        support32Bit = mkDefault true;
       };
       pulse = {
         enable = mkDefault true;

@@ -17,6 +17,7 @@
         wireless
         bluetooth
         cpu-intel
+        gpu-intel
         gpu-nvidia
         { system.stateVersion = "25.11"; }
       ];

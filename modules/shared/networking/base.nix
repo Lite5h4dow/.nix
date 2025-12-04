@@ -11,7 +11,7 @@ let
       dhcpcd = {
         enable = mkDefault true;
       };
-      networkManager = {
+      networkmanager = {
         enable = mkDefault true;
         dhcp = mkDefault "dhcpcd";
         dns = mkDefault "systemd-resoved";

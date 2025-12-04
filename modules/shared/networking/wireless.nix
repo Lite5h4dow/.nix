@@ -14,7 +14,7 @@ let
           };
         };
       };
-      networkManager = {
+      networkmanager = {
         wifi.backend = mkDefault "iwd";
       };
     };
