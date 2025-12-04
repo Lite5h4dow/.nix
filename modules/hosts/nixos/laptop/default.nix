@@ -12,9 +12,7 @@
         base
         boot
         ui
-      ]
-      ++ [
-        config.flake.modules.hardware.laptop
+        laptop
         { system.stateVersion = "25.11"; }
       ];
   };
