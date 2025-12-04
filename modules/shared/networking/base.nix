@@ -14,7 +14,7 @@ let
       networkmanager = {
         enable = mkDefault true;
         dhcp = mkDefault "dhcpcd";
-        dns = mkDefault "systemd-resoved";
+        dns = mkDefault "systemd-resolved";
       };
     };
     
