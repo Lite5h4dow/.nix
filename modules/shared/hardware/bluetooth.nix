@@ -4,7 +4,7 @@ let
   module' = {
     hardware.bluetooth = {
       enable = mkDefault true;
-      hsphfpd.enable = mkDefault true;
+      hsphfpd.enable = mkDefault false;
       powerOnBoot = mkDefault true;
       settings = {
         AVDTP = {
