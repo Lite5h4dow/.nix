@@ -1,0 +1,14 @@
+{
+  flake.modules.nixos.ui = {pkgs,...}:{
+    services = {
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = false;
+      gnome = {
+        core-apps.enable = false;
+        core-developer-tools.enable = false;
+        games.enable = false;
+      };
+    };
+    environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
+  };
+}
