@@ -4,7 +4,7 @@
 { lib, ... }:
 
 {
-  flake.modules.hardware.laptop = { ... }:{
+  flake.modules.nixos.laptop = { ... }:{
     boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
     boot.initrd.kernelModules = [ ];
     boot.kernelModules = [ "kvm-intel" ];
