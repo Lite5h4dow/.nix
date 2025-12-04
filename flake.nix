@@ -45,10 +45,6 @@
       };
     };
 
-    hyprshell = {
-      url = "github:H3rmt/hyprshell";
-    };
-
     stylix = {
       url = "github:nix-community/stylix/release-25.11";
       inputs = {
