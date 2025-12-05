@@ -19,6 +19,8 @@
         audio
         input
         gaming
+        vr
+        dev
         wireless
         bluetooth
         graphics
