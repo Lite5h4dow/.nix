@@ -4,6 +4,7 @@ let
   module' = {
     services={
       playerctld.enable = true;
+      pulseaudio.enable = false;
       pipewire = {
         enable = mkDefault true;
         audio = {
@@ -14,6 +15,9 @@ let
           support32Bit = mkDefault true;
         };
         pulse = {
+          enable = mkDefault true;
+        };
+        wireplumber = {
           enable = mkDefault true;
         };
         jack = {
