@@ -123,7 +123,7 @@
           # ];
 
           gesture = [
-            "3, horizontal, workspace"
+            # "3, horizontal, workspace"
             "3, pinchin, fullscreen"
             "3, pinchout, float"
           ];

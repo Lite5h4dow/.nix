@@ -1,6 +1,6 @@
 { inputs, config, ... }:
 {
-  flake.nixosConfigurations."laptop" = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations."loki" = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     pkgs = import inputs.nixpkgs {
       config = {
@@ -28,7 +28,7 @@
         gpu-intel
         gpu-nvidia
         {
-          networking.hostName = "glacier-blade";
+          networking.hostName = "loki";
           system.stateVersion = "25.11";
         }
       ];
