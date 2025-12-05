@@ -6,7 +6,7 @@
 {
   flake.modules.nixos.laptop = { ... }:{
     boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
-    boot.initrd.extraFirmwarePaths = ["iwlwifi-9260-th-b0-jf-b0-46.ucode.zst"];
+    boot.initrd.extraFirmwarePaths = ["iwlwifi-9260-th-b0-jf-b0-46.ucode"];
     boot.initrd.kernelModules = [ ];
     boot.kernelModules = [ "kvm-intel" ];
     boot.extraModulePackages = [ ];
