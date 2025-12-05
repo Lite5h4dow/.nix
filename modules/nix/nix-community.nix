@@ -10,6 +10,5 @@ in
 {
   flake.modules = {
     nixos.base = module';
-    nixOnDroid.base = module';
   };
 }
