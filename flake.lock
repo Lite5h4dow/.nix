@@ -593,24 +593,29 @@
         "type": "github"
       }
     },
-    "hyprspace": {
+    "hyprtasking": {
       "inputs": {
         "hyprland": [
           "hyprland"
         ],
+        "nixpkgs": [
+          "hyprtasking",
+          "hyprland",
+          "nixpkgs"
+        ],
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1764820995,
-        "narHash": "sha256-IMa4mvkF0w7OAy+yEzPFYs2an332K30lf5qfUOAS9Cw=",
-        "owner": "KZDKM",
-        "repo": "Hyprspace",
-        "rev": "0467be86b18cfc324fab04afbd40fe9ef80f7fa9",
+        "lastModified": 1763852986,
+        "narHash": "sha256-8TOQw0z84hDS9ce0Vg329R4p8YBfhOVJWHAo85XuEEQ=",
+        "owner": "raybbian",
+        "repo": "hyprtasking",
+        "rev": "387faba1e3abeaa16e3c867d745e4dc61934cb45",
         "type": "github"
       },
       "original": {
-        "owner": "KZDKM",
-        "repo": "Hyprspace",
+        "owner": "raybbian",
+        "repo": "hyprtasking",
         "type": "github"
       }
     },
@@ -1088,7 +1093,7 @@
         "hyprgrass": "hyprgrass",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
-        "hyprspace": "hyprspace",
+        "hyprtasking": "hyprtasking",
         "iio-hyprland": "iio-hyprland",
         "import-tree": "import-tree",
         "nix-on-droid": "nix-on-droid",

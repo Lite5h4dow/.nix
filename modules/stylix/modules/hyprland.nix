@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   flake.modules.homeManager.ui = {config, ...}:
   let
@@ -7,8 +7,8 @@
   {
     wayland.windowManager.hyprland.settings = {
       general ={
-        "col.active_border" = "rgba(${colors.base0D}88)";
-        "col.inactive_border" = "rgba(${colors.base03}88)";
+        "col.active_border" = lib.mkForce "rgba(${colors.base0D}88)";
+        "col.inactive_border" = lib.mkForce "rgba(${colors.base03}88)";
       };
     };
   };

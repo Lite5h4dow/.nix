@@ -1,7 +1,11 @@
 {
   flake.modules.homeManager.ui.wayland.windowManager.hyprland.settings = {
     bind =[
-      "super, tab, dispatch, hyprtasking:toggle, all"
+      "super, tab, hyprtasking:toggle, all"
     ];
+
+    plugin.hyprtasking = {
+      layout = "linear";
+    };
   };
 }
