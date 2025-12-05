@@ -39,7 +39,7 @@ let
               ExtensionSettings = builtins.listToAttrs extensions;
 
               SearchEngines = {
-                Default = "g";
+                Default = "google";
                 Add = [
                   {
                     Name = "nixpkgs packages";
