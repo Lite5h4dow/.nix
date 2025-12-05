@@ -52,6 +52,13 @@
             };
           };
 
+          groups = {
+            gadients = true;
+            indicator_gap = 3;
+            indicator_height = 14;
+            font_size = 12;
+          };
+
           dwindle = {
             pseudotile = "yes";
             preserve_split = "yes";
