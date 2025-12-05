@@ -23,7 +23,7 @@ let
         jack = {
           enable = mkDefault true;
         };
-        systemWide = mkDefault true;
+        # systemWide = mkDefault true;
       };
     };
     security.rtkit.enable = true;
