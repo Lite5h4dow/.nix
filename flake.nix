@@ -131,8 +131,19 @@
     };
 
     zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
+      type = "github";
+      owner = "youwen5";
+      repo = "zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixcord = {
+      type = "github";
+      owner = "kaylorben";
+      repo = "nixcord";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
     curd = {
