@@ -28,7 +28,7 @@
       # nix
       n = "nix";
       ne = "cd ~/.nixos";
-      nr = "nh os switch";
+      nr = "nh os switch --refresh";
       clean = "nh clean all --keep 5";
       shell = "nix shell";
       dev = "nix develop --command fish";
