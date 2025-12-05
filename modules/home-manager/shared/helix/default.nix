@@ -58,10 +58,6 @@
       };
     };
 
-    stylix.targets.helix = {
-      transparent = true;
-    };
-
     systemd.user.settings.Manager.DefaultEnvironment = {
       EDITOR = lib.getExe pkgs.helix;
       VISUAL = lib.getExe pkgs.helix;
