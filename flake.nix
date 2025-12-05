@@ -79,7 +79,6 @@
       owner = "hyprwm";
       repo = "hyprland";
       ref = "v0.52.2";
-      # submodules = true;
     };
 
     hyprland-plugins = {
@@ -87,14 +86,29 @@
       owner = "hyprwm";
       repo = "hyprland-plugins";
       ref = "v0.52.0";
-
       inputs.hyprland.follows = "hyprland";
     };
 
     hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-      # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
+      type = "github";
+      owner = "KZDKM";
+      repo = "Hyprspace";
       inputs.hyprland.follows = "hyprland";
+    };
+
+    split-monitor-workspaces = {
+      type = "github";
+      owner = "Duckonaut";
+      repo = "split-monitor-workspaces";
+      # ref = "update-pin";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    hyprgrass = {
+      type = "github";
+      owner = "horriblename";
+      repo = "hyprgrass";
+      inputs.hyprland.follows = "hyprland"; 
     };
 
     zen-browser = {

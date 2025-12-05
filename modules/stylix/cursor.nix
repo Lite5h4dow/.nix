@@ -3,7 +3,7 @@ let
   module' = attrs@{pkgs, ...}: {
     stylix.cursor = {
       package = pkgs.bibata-cursors-translucent;
-      name = "Bibata-Modern-Ice";
+      name = "Bibata-Spirit";
       size = 22;
     };
 
@@ -11,7 +11,7 @@ let
     environment = {
       systemPackages = [attrs.config.stylix.cursor.package];
       variables = {
-        HYPRCURSOR_THEME = "Bibata-modern";
+        HYPRCURSOR_THEME = "Bibata-spirit";
         HYPRCURSOR_SIZE = attrs.config.stylix.cursor.size;
       };
     };

@@ -4,16 +4,18 @@
     homeManager.ui =
       { pkgs, ... }:
       let
-        hypr-plugins = inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
         hyprspace = inputs.hyprspace.packages.${pkgs.stdenv.hostPlatform.system}.Hyprspace;
-        inherit (hypr-plugins) hyprbars hyprtrails;
+        smw = inputs.split-monitor-workspaces.packages.${pkgs.stdenv.hostPlatform.system}.split-monitor-workspaces;
+        hypr-plugins = inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
+        inherit (hypr-plugins) hyprbars hyprtrails hyprfocus xtra-dispatchers;
       in
       {
         wayland.windowManager.hyprland.plugins = [
-          # xtra-dispatchers
-          hyprtrails
-          # hyprbars
-          # hyprfocus
+          # smw
+          xtra-dispatchers
+          # hyprtrails
+          hyprbars
+          hyprfocus
           # hypr-dynamic-cursors
           # hyprspace
           # hyprgrass

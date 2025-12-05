@@ -2,23 +2,27 @@
 let
   inherit (lib) mkDefault;
   module' = {
-    services.pipewire = {
-      enable = mkDefault true;
-      audio = {
+    services={
+      playerctld.enable = true;
+      pipewire = {
         enable = mkDefault true;
+        audio = {
+          enable = mkDefault true;
+        };
+        alsa = {
+          enable = mkDefault true;
+          support32Bit = mkDefault true;
+        };
+        pulse = {
+          enable = mkDefault true;
+        };
+        jack = {
+          enable = mkDefault true;
+        };
+        systemWide = mkDefault true;
       };
-      alsa = {
-        enable = mkDefault true;
-        support32Bit = mkDefault true;
-      };
-      pulse = {
-        enable = mkDefault true;
-      };
-      jack = {
-        enable = mkDefault true;
-      };
-      systemWide = mkDefault true;
     };
+    security.rtkit.enable = true;
   };
 in
 {
