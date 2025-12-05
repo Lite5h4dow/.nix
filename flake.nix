@@ -71,7 +71,9 @@
     };
 
     vscode-server = {
-      url = "github:nix-community/nixos-vscode-server";
+      type = "github";
+      owner = "nix-community";
+      repo = "nixos-vscode-server";
     };
 
     hyprland = {
@@ -147,8 +149,20 @@
     };
 
     curd = {
-      url = "github:Wraient/curd";
+      type = "github";
+      owner = "Wraient";
+      repo = "curd";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-gaming = {
+      type = "github";
+      owner = "fufexan";
+      repo = "nix-gaming";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
     };
   };
 
