@@ -6,16 +6,16 @@
       let
         hypr-plugins = inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
         hyprspace = inputs.hyprspace.packages.${pkgs.stdenv.hostPlatform.system}.Hyprspace;
-        inherit (hypr-plugins) hyprbars hyprgrass;
+        inherit (hypr-plugins) hyprbars hyprtrails;
       in
       {
         wayland.windowManager.hyprland.plugins = [
           # xtra-dispatchers
-          # hyprtrails
-          hyprbars
+          hyprtrails
+          # hyprbars
           # hyprfocus
           # hypr-dynamic-cursors
-          hyprspace
+          # hyprspace
           # hyprgrass
         ];
       };

@@ -75,15 +75,19 @@
     };
 
     hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland";
-      ref = "v0.52.2-b";
-      submodules = true;
-      # inputs.nixpkgs.follows = "nixpkgs";
+      type = "github";
+      owner = "hyprwm";
+      repo = "hyprland";
+      ref = "v0.52.2";
+      # submodules = true;
     };
 
     hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
+      type = "github";
+      owner = "hyprwm";
+      repo = "hyprland-plugins";
+      ref = "v0.52.0";
+
       inputs.hyprland.follows = "hyprland";
     };
 
