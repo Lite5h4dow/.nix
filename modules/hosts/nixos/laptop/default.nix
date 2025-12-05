@@ -18,6 +18,7 @@
         ui
         audio
         input
+        gaming
         wireless
         bluetooth
         graphics
