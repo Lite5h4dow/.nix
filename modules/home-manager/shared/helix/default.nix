@@ -7,10 +7,6 @@
           line-number = "relative";
           auto-pairs = true;
           completion-trigger-len = 1;
-          shell = [
-            "bash"
-            "-c"
-          ];
           bufferline = "always";
           lsp = {
             enable = true;
