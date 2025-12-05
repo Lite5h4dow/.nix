@@ -1,15 +1,15 @@
 { ... }:
 {
   flake.modules = {
-    homeModules.ui =
+    homeManager.ui =
       { pkgs, ... }:
       {
         wayland.windowManager.hyprland.plugins = with pkgs.hyprlandPlugins; [
-          xtra-dispatchers
-          hyprtrails
-          hyprbars
-          hyprfocus
-          hypr-dynamic-cursors
+          # xtra-dispatchers
+          # hyprtrails
+          # hyprbars
+          # hyprfocus
+          # hypr-dynamic-cursors
           hyprspace
           hyprgrass
         ];

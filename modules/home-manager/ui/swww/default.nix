@@ -1,7 +1,7 @@
 { ... }:
 {
   flake.modules = {
-    homeModules.ui = {
+    homeManager.ui = {
       services.swww = {
         enable = true;
       };

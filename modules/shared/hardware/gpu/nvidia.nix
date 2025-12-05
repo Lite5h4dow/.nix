@@ -8,7 +8,7 @@ let
       videoAcceleration = mkDefault true;
       nvidiaSettings = mkDefault true;
 
-      dynamicBoost.enable = mkDefault true;
+      dynamicBoost.enable = mkDefault false;
       powerManagement.enable = mkDefault false;
     };
     services.xserver.videoDrivers = [ "nvidia" ];

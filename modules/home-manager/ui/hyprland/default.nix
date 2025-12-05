@@ -1,8 +1,10 @@
 { ... }:
 {
   flake.modules = {
-    homeModules.ui = {
-      wayland.windowManager.hyprland.settings = {
+    homeManager.ui = {
+      wayland.windowManager.hyprland = {
+        enable=true;
+      settings = {
         monitor = [", preferred, auto, 1"];
         env = [
           "XDG_SESSION_DESKTOP, Hyprland"
@@ -75,4 +77,4 @@
       };
     };
   };
-}
+};}

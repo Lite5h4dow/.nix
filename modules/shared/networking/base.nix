@@ -4,19 +4,10 @@ let
   module' = {
     networking = {
       useDHCP = mkDefault true;
-      resolvconf = {
-        enable = mkDefault true;
-        dnsSingleRequest = mkDefault false;
-      };
-      dhcpcd = {
-        enable = mkDefault true;
-      };
-      networkmanager = {
-        enable = mkDefault true;
-        dhcp = mkDefault "dhcpcd";
-        dns = mkDefault "systemd-resolved";
-      };
+      enableIPv6 = mkDefault true;
     };
+
+    services.resolved.enable = mkDefault true;
     
   };
 in

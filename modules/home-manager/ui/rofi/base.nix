@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  flake.modules.homeModules.ui =
+  flake.modules.homeManager.ui =
     { pkgs, ... }:
     {
       programs.rofi = {

@@ -10,7 +10,7 @@ in
         useGlobalPkgs = true;
         useUserPackages = true;
         extraSpecialArgs.hasGlobalPkgs = true;
-        backupFileExtension = ".bak";
+        backupFileExtension = ".old";
         users.${username} = {
           home.stateVersion = args.config.system.stateVersion;
           imports = [ config.flake.modules.homeManager.base ];
@@ -19,8 +19,12 @@ in
     };
 
     nixos.ui = {
+      imports = [ inputs.home-manager.nixosModules.home-manager ];
       home-manager = {
-        users.${username}.imports = [ config.flake.modules.homeManager.ui];
+        users.${username}.imports = [
+          config.flake.modules.homeManager.base
+          config.flake.modules.homeManager.ui
+        ];
       };
     };
   };
