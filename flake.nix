@@ -89,18 +89,24 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    hyprspace = {
+    hyprtasking = {
       type = "github";
-      owner = "KZDKM";
-      repo = "Hyprspace";
+      owner = "raybbian";
+      repo = "hyprtasking";
       inputs.hyprland.follows = "hyprland";
     };
+
+    # hyprspace = {
+    #   type = "github";
+    #   owner = "KZDKM";
+    #   repo = "Hyprspace";
+    #   inputs.hyprland.follows = "hyprland";
+    # };
 
     split-monitor-workspaces = {
       type = "github";
       owner = "Duckonaut";
       repo = "split-monitor-workspaces";
-      # ref = "update-pin";
       inputs.hyprland.follows = "hyprland";
     };
 
@@ -108,7 +114,20 @@
       type = "github";
       owner = "horriblename";
       repo = "hyprgrass";
-      inputs.hyprland.follows = "hyprland"; 
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    hypr-dynamic-cursors = {
+      type = "github";
+      owner = "VirtCode";
+      repo = "hypr-dynamic-cursors";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    iio-hyprland = {
+      type = "github";
+      owner = "JeanSchoeller";
+      repo = "iio-hyprland";
     };
 
     zen-browser = {
