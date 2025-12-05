@@ -2,9 +2,6 @@
 let
   polyModule = {
     stylix.opacity = lib.genAttrs [ "applications" "desktop" "popups" "terminal" ] (n: 0.85);
-    stylix.targets.helix = {
-      transparent = true;
-    };
   };
 in
 {
