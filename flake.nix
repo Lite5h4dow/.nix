@@ -74,6 +74,25 @@
       url = "github:nix-community/nixos-vscode-server";
     };
 
+    hyprland = {
+      type = "git";
+      url = "https://github.com/hyprwm/Hyprland";
+      ref = "v0.52.2-b";
+      submodules = true;
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    hyprspace = {
+      url = "github:KZDKM/Hyprspace";
+      # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
+      inputs.hyprland.follows = "hyprland";
+    };
+
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";

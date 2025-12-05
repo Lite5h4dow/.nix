@@ -1,7 +1,7 @@
 {
   flake.modules.homeManager.ui.wayland.windowManager.hyprland.settings = {
     bind =[
-      # "super, tab, overview:toggle"
+      # "super, tab, Overview, overview:toggle"
     ];
   };
 }
