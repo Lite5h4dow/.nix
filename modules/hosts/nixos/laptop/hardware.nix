@@ -4,25 +4,43 @@
 { lib, ... }:
 
 {
-  flake.modules.nixos.laptop = { ... }:{
-    boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
-    boot.initrd.extraFirmwarePaths = ["iwlwifi-9260-th-b0-jf-b0-46.ucode"];
-    boot.initrd.kernelModules = [ ];
-    boot.kernelModules = [ "kvm-intel" ];
-    boot.extraModulePackages = [ ];
+  flake.modules.nixos.laptop =
+    { modulesPath, ... }:
+    {
+      imports = [
+        (modulesPath + "/installer/scan/not-detected.nix")
+      ];
 
-    fileSystems."/" =
-      { device = "/dev/disk/by-uuid/1daccc88-d542-4203-88c1-ec5a3ca769e6";
+      boot = {
+        initrd = {
+          availableKernelModules = [
+            "xhci_pci"
+            "nvme"
+            "usb_storage"
+            "usbhid"
+            "sd_mod"
+          ];
+          kernelModules = [ ];
+        };
+        kernelModules = [ "kvm-intel" ];
+        extraModulePackages = [ ];
+
+      };
+      fileSystems."/" = {
+        device = "/dev/disk/by-uuid/1daccc88-d542-4203-88c1-ec5a3ca769e6";
         fsType = "ext4";
       };
 
-    fileSystems."/boot" =
-      { device = "/dev/disk/by-uuid/FCFC-7812";
+      fileSystems."/boot" = {
+        device = "/dev/disk/by-uuid/FCFC-7812";
         fsType = "vfat";
-        options = [ "fmask=0022" "dmask=0022" ];
+        options = [
+          "fmask=0022"
+          "dmask=0022"
+        ];
       };
 
-    nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-    hardware.cpu.intel.updateMicrocode = lib.mkDefault true;
-  };
+      nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+      hardware.cpu.intel.updateMicrocode = lib.mkDefault true;
+    };
 }
