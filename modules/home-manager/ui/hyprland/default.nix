@@ -52,7 +52,7 @@
             };
           };
 
-          groups = {
+          group.groupbar = {
             gadients = true;
             indicator_gap = 3;
             indicator_height = 14;
