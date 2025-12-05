@@ -855,6 +855,29 @@
         "type": "github"
       }
     },
+    "nix-gaming": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1764900011,
+        "narHash": "sha256-iG5HqIzZ12qzTi3xCwBinw/PR0xNlJNXLLQyV2En1OY=",
+        "owner": "fufexan",
+        "repo": "nix-gaming",
+        "rev": "e1829ce2d33b1e289b3ecca7530dee84da8d9e85",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fufexan",
+        "repo": "nix-gaming",
+        "type": "github"
+      }
+    },
     "nix-on-droid": {
       "inputs": {
         "home-manager": [
@@ -1165,6 +1188,7 @@
         "hyprtasking": "hyprtasking",
         "iio-hyprland": "iio-hyprland",
         "import-tree": "import-tree",
+        "nix-gaming": "nix-gaming",
         "nix-on-droid": "nix-on-droid",
         "nixcord": "nixcord",
         "nixos-wsl": "nixos-wsl",
