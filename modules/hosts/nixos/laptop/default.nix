@@ -24,7 +24,10 @@
         cpu-intel
         gpu-intel
         gpu-nvidia
-        { system.stateVersion = "25.11"; }
+        {
+          networking.hostName = "glacier-blade";
+          system.stateVersion = "25.11";
+        }
       ];
   };
 }

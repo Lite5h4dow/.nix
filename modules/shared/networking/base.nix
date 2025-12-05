@@ -1,13 +1,13 @@
-{ lib, ... }:
+{ ... }:
 let
-  inherit (lib) mkDefault;
   module' = {
     networking = {
-      useDHCP = mkDefault true;
-      enableIPv6 = mkDefault true;
+      useDHCP = true;
+      enableIPv6 = true;
+      resolvconf.enable = false;
     };
 
-    services.resolved.enable = mkDefault true;
+    services.resolved.enable = true;
     
   };
 in
