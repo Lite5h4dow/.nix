@@ -59,8 +59,8 @@
     };
 
     systemd.user.settings.Manager.DefaultEnvironment = {
-      EDITOR = lib.getExe pkgs.helix;
-      VISUAL = lib.getExe pkgs.helix;
+      EDITOR = "hx";
+      VISUAL = "hx";
     };
   };
 }
