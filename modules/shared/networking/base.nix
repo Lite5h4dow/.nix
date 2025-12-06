@@ -2,9 +2,12 @@
 let
   module' = {
     networking = {
-      useDHCP = true;
       enableIPv6 = true;
       resolvconf.enable = false;
+      networkmanager = {
+        enable = true;
+        dns = "systemd-resolved";
+      };
     };
 
     services.resolved.enable = true;

@@ -14,6 +14,9 @@ let
           };
         };
       };
+      networkmanager = {
+        wifi.backend = "iwd";
+      };
     };
   };
 in

@@ -5,9 +5,9 @@
     inherit (config.stylix.fonts) sansSerif sizes;
   in
   {
-     programs.hyprpanel.theme.font = {
+     programs.hyprpanel.settings.theme.font = {
        name = sansSerif.name;
-       size = "${sizes.desktop}px";
+       size = "${toString sizes.desktop}px";
      };
   };
 }
