@@ -6,6 +6,7 @@
       let
         inherit (pkgs.stdenv.hostPlatform) system;
         hyprgrass = inputs.hyprgrass.packages.${system}.default;
+        # hyprspace = inputs.hyprspace.packages.${system}.Hyprspace;
         hyprtasking = inputs.hyprtasking.packages.${system}.hyprtasking;
         hdc = inputs.hypr-dynamic-cursors.packages.${system}.hypr-dynamic-cursors;
         smw = inputs.split-monitor-workspaces.packages.${system}.split-monitor-workspaces;
@@ -14,7 +15,6 @@
         inherit (hypr-plugins)
           hyprbars
           hyprfocus
-          hyprtrails
           xtra-dispatchers
           ;
       in
@@ -22,12 +22,11 @@
         wayland.windowManager.hyprland.plugins = [
           smw
           hdc
-          xtra-dispatchers
-          # hyprtrails
           hyprbars
-          hyprfocus
-          hyprtasking
+          # hyprspace
           # hyprgrass
+          hyprfocus
+          xtra-dispatchers
         ];
       };
   };

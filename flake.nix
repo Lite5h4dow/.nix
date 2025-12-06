@@ -102,6 +102,7 @@
     #   type = "github";
     #   owner = "KZDKM";
     #   repo = "Hyprspace";
+    #   ref = "0a82e3724f929de8ad8fb04d2b7fa128493f24f7";
     #   inputs.hyprland.follows = "hyprland";
     # };
 
