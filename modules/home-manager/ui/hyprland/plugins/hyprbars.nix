@@ -10,7 +10,7 @@
     };
 
     windowrule = [
-      "plugin:hyprbars:nobar, match:group true"
+      "match:group true, plugin:hyprbars:nobar"
     ];
   };
 }
