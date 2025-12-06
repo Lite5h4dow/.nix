@@ -54,13 +54,13 @@
 
           group.groupbar = {
             gradients = true;
-            gradient_rounding = 10;
+            gradient_rounding = 5;
             height = 20;
             gradient_round_only_edges = false;
             indicator_height = 0;
             font_size = 12;
             gaps_in = 5;
-            gaps_out = 2;
+            gaps_out = 5;
           };
 
           dwindle = {
