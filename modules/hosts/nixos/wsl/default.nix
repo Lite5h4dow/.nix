@@ -4,6 +4,7 @@
     "wsl" = inputs.nixpkgs.lib.nixosSystem{
       system = "x86_64-linux";
       pkgs = import inputs.nixpkgs {
+        cudaSupport = true;
         stdenv.hostPlatform.system = "x86_64-linux";
       };
       modules = [
