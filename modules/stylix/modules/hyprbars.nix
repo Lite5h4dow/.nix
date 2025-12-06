@@ -22,7 +22,7 @@
       windowrulev2 = [
         "plugin:hyprbars:bar_color rgba(${colors.base0D}88),focus:1"
         "plugin:hyprbars:bar_color rgba(${colors.base03}88),focus:0"
-        "plugin:hyprbars:nobar, group:.*"
+        "plugin:hyprbars:nobar, !group:.*"
 
         # "plugin:hyprbars:title_color rgb(000000FF),focus:1"
         # "plugin:hyprbars:title_color rgb(111111FF),focus:0"
