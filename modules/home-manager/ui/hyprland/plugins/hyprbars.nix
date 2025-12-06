@@ -11,6 +11,6 @@
 
     windowrule = [
       "plugin:hyprbars:nobar, group"
-    ]
+    ];
   };
 }
