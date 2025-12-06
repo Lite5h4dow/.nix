@@ -1,6 +1,9 @@
 { ... }:
 {
-  flake.modules.homeManager.ui = { ... }:
+  flake.modules.homeManager.ui = { config, ... }:
+  let
+    inherit (config.lib.formats.rasi) mkLiteral;
+  in
   {
     programs.rofi.theme = {
       window = {
