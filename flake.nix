@@ -109,6 +109,7 @@
       type = "github";
       owner = "Duckonaut";
       repo = "split-monitor-workspaces";
+      ref = "a01946c0a81f94463232df7fd5c9b7d2581f89e1";
       inputs.hyprland.follows = "hyprland";
     };
 

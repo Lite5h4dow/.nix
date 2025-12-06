@@ -20,7 +20,7 @@
       in
       {
         wayland.windowManager.hyprland.plugins = [
-          # smw
+          smw
           hdc
           xtra-dispatchers
           # hyprtrails
