@@ -54,7 +54,6 @@
 
           group.groupbar = {
             gradients = true;
-            indicator_gap = 3;
             indicator_height = 5;
             font_size = 12;
             gaps_in = 5;
