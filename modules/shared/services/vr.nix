@@ -1,11 +1,8 @@
 { ... }:
 {
-  flake.modules.nixos.vr = { config, pkgs, ... }:{
+  flake.modules.nixos.vr = {
     services.wivrn = {
       enable = true;
-      package = pkgs.wivrn.override {
-        cudaSupport = config.flake.meta.cudaAvailable;
-      };
       defaultRuntime = true;
       highPriority = true;
       openFirewall = true;

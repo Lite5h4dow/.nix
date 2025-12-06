@@ -1,8 +1,7 @@
 { lib, ... }:
 let
-  inherit (lib) mkDefault;
-  module' = { pkgs, config, ... }:{
-    config.flake.meta.cudaAvailable = true;
+  inherit (lib) mkDefault mkForce;
+  module' = { pkgs, ... }:{
     hardware.nvidia = {
       open = false;
 
@@ -14,6 +13,9 @@ let
     };
     services = {
       xserver.videoDrivers = [ "nvidia" ];
+      wivrn.package = pkgs.wivrn.override {
+        cudaSupport = config.flake.meta.cudaAvailable;
+      };
     };
 
     nix.settings = {
@@ -24,7 +26,6 @@ let
 in
 {
   flake = {
-    meta.cudaAvailable = mkDefault false;
     modules.nixos.gpu-nvidia = module';
   };
 }
