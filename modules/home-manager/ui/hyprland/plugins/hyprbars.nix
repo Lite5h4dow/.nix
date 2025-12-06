@@ -9,8 +9,8 @@
       bar_precedence_over_border = true;
     };
 
-    windowrule = [
-      "match:group true, plugin:hyprbars:nobar"
+    windowrulev2 = [
+      "plugin:hyprbars:nobar, group:1"
     ];
   };
 }
