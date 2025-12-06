@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.modules.nixos.vr = { config, ... }:{
+  flake.modules.nixos.vr = { config, pkgs, ... }:{
     services.wivrn = {
       enable = true;
       package = pkgs.wivrn.override {
