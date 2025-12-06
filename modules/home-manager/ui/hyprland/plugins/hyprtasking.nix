@@ -1,8 +1,8 @@
 {
   flake.modules.homeManager.ui.wayland.windowManager.hyprland.settings = {
     bind =[
-      "super, tab, hyprtasking:toggle, all"
-      ", escape, hyprtasking:if_active, hyprtasking:toggle cursor"
+      # "super, tab, hyprtasking:toggle, all"
+      # ", escape, hyprtasking:if_active, hyprtasking:toggle cursor"
     ];
 
     gesture = [
@@ -13,13 +13,12 @@
       # "4, up, dispatcher, hyprtasking:toggle, all"
     ];
 
-    plugin.hyprtasking = {
-      layout = "linear";
-      gestures.enable = true;
-      linear = {
-        blur = false;
-      };
-    };
-    
+    # plugin.hyprtasking = {
+    #   layout = "linear";
+    #   gestures.enable = true;
+    #   linear = {
+    #     blur = false;
+    #   };
+    # };
   };
 }

@@ -1233,7 +1233,7 @@
       },
       "original": {
         "owner": "Duckonaut",
-        "ref": "a01946c0a81f94463232df7fd5c9b7d2581f89e1",
+        "ref": "v0.52.2",
         "repo": "split-monitor-workspaces",
         "type": "github"
       }

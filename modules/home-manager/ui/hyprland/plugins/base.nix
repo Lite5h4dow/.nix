@@ -5,9 +5,8 @@
       { pkgs, ... }:
       let
         inherit (pkgs.stdenv.hostPlatform) system;
-        hyprgrass = inputs.hyprgrass.packages.${system}.default;
+        # hyprgrass = inputs.hyprgrass.packages.${system}.default;
         # hyprspace = inputs.hyprspace.packages.${system}.Hyprspace;
-        hyprtasking = inputs.hyprtasking.packages.${system}.hyprtasking;
         hdc = inputs.hypr-dynamic-cursors.packages.${system}.hypr-dynamic-cursors;
         smw = inputs.split-monitor-workspaces.packages.${system}.split-monitor-workspaces;
 

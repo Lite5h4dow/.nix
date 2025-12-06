@@ -6,9 +6,9 @@
   in
   {
     wayland.windowManager.hyprland.settings = {
-      plugin.hyprtasking = {
-        bg_color = "0x${colors.base00}ff";
-      };
+      # plugin.hyprtasking = {
+      #   bg_color = "0x${colors.base00}ff";
+      # };
     };
   };
 }
