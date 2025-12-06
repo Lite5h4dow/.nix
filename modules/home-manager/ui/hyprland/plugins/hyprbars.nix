@@ -8,5 +8,9 @@
       bar_part_of_window = true;
       bar_precedence_over_border = true;
     };
+
+    windowrule = [
+      "plugin:hyprbars:nobar, group"
+    ]
   };
 }
