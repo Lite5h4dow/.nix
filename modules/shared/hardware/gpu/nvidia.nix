@@ -14,7 +14,7 @@ let
     services = {
       xserver.videoDrivers = [ "nvidia" ];
       wivrn.package = pkgs.wivrn.override {
-        cudaSupport = config.flake.meta.cudaAvailable;
+        cudaSupport = true;
       };
     };
 
