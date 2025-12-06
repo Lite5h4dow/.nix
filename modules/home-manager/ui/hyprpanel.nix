@@ -35,5 +35,5 @@
         theme.bar.transparent = true;
       };
     };
-  }
+  };
 }
