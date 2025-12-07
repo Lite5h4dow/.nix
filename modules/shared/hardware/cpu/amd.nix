@@ -7,5 +7,5 @@ let
   };
 in
 {
-  flake.modules.nixos.desktop = module';
+  flake.modules.nixos.cpu-amd = module';
 }
