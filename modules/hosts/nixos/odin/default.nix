@@ -20,7 +20,7 @@
         input
         gaming
         vr
-        # extras
+        extras
         cad
         dev
         dev-extras
