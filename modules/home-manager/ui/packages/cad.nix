@@ -6,5 +6,5 @@
       freecad
       prusa-slicer
     ];
-  }
+  };
 }
