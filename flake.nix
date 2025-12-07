@@ -166,6 +166,14 @@
         flake-parts.follows = "flake-parts";
       };
     };
+
+    polymc = {
+      type = "github";
+      owner = "PolyMC";
+      repo = "PolyMC";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =

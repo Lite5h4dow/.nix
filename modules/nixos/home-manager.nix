@@ -42,6 +42,12 @@ in
       ];
     };
 
+    gaming = {
+      home-manager.users.${username}.imports = [
+        config.flake.modules.homeManager.gaming
+      ];
+    };
+
     gamesdev = {
       home-manager.users.${username}.imports = [
         config.flake.modules.homeManager.gamesdev
