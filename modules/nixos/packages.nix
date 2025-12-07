@@ -6,7 +6,7 @@
       environment.systemPackages = with pkgs; [ toybox ];
     };
 
-    extra = {pkgs, ...}:
+    extras = {pkgs, ...}:
     {
       environment.systemPackages = with pkgs; [ deskflow ];
     };
