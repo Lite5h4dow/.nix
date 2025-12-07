@@ -28,8 +28,7 @@
         bluetooth
         graphics
         virtualisation
-        cpu-intel
-        gpu-intel
+        cpu-amd
         gpu-nvidia
         {
           networking.hostName = "odin";
