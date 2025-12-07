@@ -19,7 +19,11 @@
         input
         gaming
         vr
+        extras
+        cad
         dev
+        dev-extras
+        gamesdev
         wireless
         bluetooth
         graphics

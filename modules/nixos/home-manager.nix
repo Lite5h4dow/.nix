@@ -19,19 +19,33 @@ in
     };
 
     ui = {
-      home-manager = {
-        users.${username}.imports = [
-          config.flake.modules.homeManager.ui
-        ];
-      };
+      home-manager.users.${username}.imports = [
+        config.flake.modules.homeManager.ui
+      ];
+    };
+
+    cad = {
+      home-manager.users.${username}.imports = [
+        config.flake.modules.homeManager.cad
+      ];
+    };
+
+    dev = {
+      home-manager.users.${username}.imports = [
+        config.flake.modules.homeManager.dev
+      ];
+    };
+
+    dev-extras = {
+      home-manager.users.${username}.imports = [
+        config.flake.modules.homeManager.dev-extras
+      ];
     };
 
     gamesdev = {
-      home-manager = {
-        users.${username}.imports = [
-          config.flake.modules.homeManager.gamesdev
-        ];
-      };
+      home-manager.users.${username}.imports = [
+        config.flake.modules.homeManager.gamesdev
+      ];
     };
   };
 }
