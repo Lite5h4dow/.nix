@@ -1,6 +1,7 @@
 { ... }:
 {
-  flake.modules.homeManager.dev-extras = {
+  flake.modules.homeManager.dev-extras = {pkgs, ...}:
+  {
     home.packages =
       with pkgs; [
         # language servers
