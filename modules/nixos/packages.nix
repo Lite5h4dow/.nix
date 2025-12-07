@@ -8,7 +8,7 @@
 
     extras = {pkgs, ...}:
     {
-      environment.systemPackages = with pkgs; [ deskflow ];
+      environment.systemPackages = with pkgs; [ lan-mouse ];
     };
   };
 
