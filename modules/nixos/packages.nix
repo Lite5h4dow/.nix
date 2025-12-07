@@ -10,7 +10,7 @@
     {
       environment.systemPackages = with pkgs; [
         lan-mouse
-        teams-teams-for-linux
+        teams-for-linux
       ];
     };
   };
