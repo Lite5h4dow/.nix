@@ -8,7 +8,10 @@
 
     extras = {pkgs, ...}:
     {
-      environment.systemPackages = with pkgs; [ lan-mouse ];
+      environment.systemPackages = with pkgs; [
+        lan-mouse
+        teams-teams-for-linux
+      ];
     };
   };
 
