@@ -87,7 +87,7 @@
           };
 
           windowrulev2 = [
-            "initialTitle: Picture-in-Picture, float:on, pin:on"
+            "float:on, pin:on, initialTitle: Picture-in-Picture"
           ];
 
           binds = {
