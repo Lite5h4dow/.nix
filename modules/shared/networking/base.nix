@@ -15,5 +15,5 @@ let
   };
 in
 {
-  flake.modules.nixos.base = module';
+  flake.modules.nixos.networking = module';
 }

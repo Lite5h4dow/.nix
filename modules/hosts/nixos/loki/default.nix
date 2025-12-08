@@ -23,6 +23,7 @@
         dev
         wireless
         bluetooth
+        networking
         graphics
         cpu-intel
         gpu-intel

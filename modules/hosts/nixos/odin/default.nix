@@ -25,6 +25,7 @@
         dev
         dev-extras
         gamesdev
+        networking
         wireless
         bluetooth
         graphics
