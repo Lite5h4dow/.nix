@@ -86,6 +86,10 @@
             disable_hyprland_logo = true;
           };
 
+          windowrulev2 = [
+            "initialTitle: Picture-in-Picture, float:on, pin:on"
+          ];
+
           binds = {
             allow_workspace_cycles = true;
           };
