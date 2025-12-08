@@ -150,11 +150,11 @@
     "custom-uboot": {
       "flake": false,
       "locked": {
-        "lastModified": 1765192325,
-        "narHash": "sha256-28YoidB4EChuuVVTrZDbZgMTymf2zspVpfq4XA+3zeE=",
+        "lastModified": 1765194325,
+        "narHash": "sha256-b2KwX4PRVVFCZMCXipl90C2rsd+VKjtnUkKtQyLZIiE=",
         "owner": "lite5h4dow",
         "repo": "u-boot",
-        "rev": "693bce50f4da474155e12cf7709212d95cc47d6d",
+        "rev": "63cc8ee17485b40e0e0cb1adc4660a05707d09ab",
         "type": "github"
       },
       "original": {

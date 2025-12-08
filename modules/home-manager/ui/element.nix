@@ -14,6 +14,7 @@
   {
     programs.element-desktop = {
       enable = true;
+      package = element';
     };
   };
 }
