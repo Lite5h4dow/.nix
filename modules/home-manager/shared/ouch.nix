@@ -1,5 +1,6 @@
 {
-  flake.modules.homeModules.base = { pkgs, ... }:{
+  flake.modules.homeManager.base = { pkgs, ... }:
+  {
     home.packages = with pkgs; [ouch];
   };
 }
