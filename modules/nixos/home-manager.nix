@@ -32,7 +32,7 @@ in
 
     dev = {
       home-manager.users.${username}.imports = [
-        # config.flake.modules.homeManager.dev
+        config.flake.modules.homeManager.dev
       ];
     };
 
