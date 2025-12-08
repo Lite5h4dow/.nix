@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  perSystem.uboot.radxa-cm3j = inputs.nixpkgs.legacyPackages.aarch64-linux.buildUBoot {
+  flake.uboot.radxa-cm3j = inputs.nixpkgs.legacyPackages.aarch64-linux.buildUBoot {
     src = inputs.custom-uboot;
     version = "2025.10";
     BL31 = "${inputs.nixpkgs.legacyPackages.aarch64-linux.armTrustedFirmwareRK3568}/bl31.elf";
