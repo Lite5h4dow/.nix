@@ -11,6 +11,7 @@
 
     windowrulev2 = [
       "plugin:hyprbars:nobar, group:1"
+      "plugin:hyprbars:nobar, initialTitle:(Picture-in-Picture)"
     ];
   };
 }
