@@ -174,6 +174,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    custom-uboot = {
+      type = "github";
+      owner = "lite5h4dow";
+      repo = "u-boot";
+      flake = false;
+    };
+
   };
 
   outputs =

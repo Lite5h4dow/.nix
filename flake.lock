@@ -147,6 +147,22 @@
         "type": "github"
       }
     },
+    "custom-uboot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1765192325,
+        "narHash": "sha256-28YoidB4EChuuVVTrZDbZgMTymf2zspVpfq4XA+3zeE=",
+        "owner": "lite5h4dow",
+        "repo": "u-boot",
+        "rev": "693bce50f4da474155e12cf7709212d95cc47d6d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lite5h4dow",
+        "repo": "u-boot",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -1234,6 +1250,7 @@
       "inputs": {
         "agenix": "agenix",
         "curd": "curd",
+        "custom-uboot": "custom-uboot",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "hypr-dynamic-cursors": "hypr-dynamic-cursors",
