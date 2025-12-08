@@ -87,7 +87,7 @@
           };
 
           windowrulev2 = [
-            "float, pin, nofocus, noborder, norounding, initialTitle:(Picture-in-Picture)"
+            "float, pin, noborder, norounding, initialTitle:(Picture-in-Picture)"
           ];
 
           binds = {
