@@ -12,6 +12,13 @@
         register = false;
       };
 
+      wslConf = {
+        network = {
+          hostname = config.networking.hostName;
+          generateHosts = false;
+        };
+      };
+
       defaultUser = config.flake.meta.user.name;
     };
   };
