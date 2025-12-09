@@ -14,7 +14,7 @@
         config.flake.modules.nixos.dev-extras
         {
           system.stateVersion = "25.11";
-          networkin.hostName = "nixos-wsl";
+          networking.hostName = "nixos-wsl";
         }
       ];
     };
