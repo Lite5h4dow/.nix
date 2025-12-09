@@ -13,6 +13,7 @@
         config.flake.modules.nixos.wsl
         config.flake.modules.nixos.dev-extras
         {
+          flake.meta.hostname = "nixos-wsl";
           system.stateVersion = "25.11";
           networking.hostName = "nixos-wsl";
         }
