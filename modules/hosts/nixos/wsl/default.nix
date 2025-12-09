@@ -1,7 +1,7 @@
 { inputs, config, ... }:
 {
   flake.nixosConfigurations = {
-    "wsl" = inputs.nixpkgs.lib.nixosSystem{
+    "nixos-wsl" = inputs.nixpkgs.lib.nixosSystem{
       system = "x86_64-linux";
       pkgs = import inputs.nixpkgs {
         system = "x86_64-linux";
@@ -12,7 +12,10 @@
         config.flake.modules.nixos.base
         config.flake.modules.nixos.wsl
         config.flake.modules.nixos.dev-extras
-        {system.stateVersion = "25.11";}
+        {
+          system.stateVersion = "25.11";
+          networkin.hostName = "nixos-wsl";
+        }
       ];
     };
   };
