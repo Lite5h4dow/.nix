@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   flake.modules.homeManager.base.programs.git = {
     enable = true;
@@ -7,12 +8,16 @@
         email = "lite5h4dow+dev@gmail.com";
       };
 
+      core = {
+        editor = "hx";
+      };
+
       credential = {
         # helper = "${pkgs.gitFull}/bin/git-credential-libsecret";
         # credentialStore = "secretservice";
         "https://git.litelot.us".username = "litelotus";
-        "https://www.github.com".username = "lite5h4dow+dev@gmail.com";
-        "https://github.com".username = "lite5h4dow+dev@gmail.com";
+        "https://www.github.com".username = lib.mkDefault "lite5h4dow+dev@gmail.com";
+        "https://github.com".username =  lib.mkDefault "lite5h4dow+dev@gmail.com";
       };
 
       init = {
@@ -21,6 +26,10 @@
 
       push = {
         autoSetupRemote = true;
+      };
+
+      pull = {
+        rebase = "merges";
       };
 
       url = {
