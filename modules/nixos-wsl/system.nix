@@ -14,7 +14,7 @@
 
       wslConf = {
         network = {
-          hostname = config.flake.meta.hostname;
+          hostname = "flake-wsl";
           generateHosts = false;
         };
       };
