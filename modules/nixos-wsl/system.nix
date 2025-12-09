@@ -14,7 +14,7 @@
 
       wslConf = {
         network = {
-          hostname = "flake-wsl";
+          hostname = "nixos-wsl";
           generateHosts = false;
         };
       };
