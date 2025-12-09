@@ -11,6 +11,7 @@
       modules = [
         config.flake.modules.nixos.base
         config.flake.modules.nixos.wsl
+        config.flake.modules.nixos.dev-extras
         {system.stateVersion = "25.11";}
       ];
     };

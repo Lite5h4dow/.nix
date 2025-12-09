@@ -43,6 +43,14 @@
             hidden = false;
           };
 
+          gutters = [
+            "line-numbers"
+            "diagnostics"
+            "diff"
+          ];
+
+          softwrap.enable = true;
+
           inline-diagnostics = {
             cursor-line = "hint";
             other-lines = "error";
