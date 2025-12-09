@@ -14,7 +14,6 @@
 
       wslConf = {
         network = {
-          hostname = "nixos-wsl";
           generateHosts = false;
         };
       };
