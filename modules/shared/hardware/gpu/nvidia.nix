@@ -16,6 +16,9 @@ let
       wivrn.package = pkgs.wivrn.override {
         cudaSupport = true;
       };
+      ollama = {
+        accelleration = "cuda";
+      };
     };
 
     nix.settings = {
