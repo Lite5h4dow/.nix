@@ -49,7 +49,7 @@
             "diff"
           ];
 
-          softwrap.enable = true;
+          soft-wrap.enable = true;
 
           inline-diagnostics = {
             cursor-line = "hint";
