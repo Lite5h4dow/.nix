@@ -17,7 +17,7 @@ let
         cudaSupport = true;
       };
       ollama = {
-        accelleration = "cuda";
+        acceleration = "cuda";
       };
     };
 
