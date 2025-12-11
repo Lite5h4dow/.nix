@@ -1,7 +1,7 @@
-{ inputs, lib, ... }:
+{ inputs, ... }:
 {
   flake.modules.nixos.vr =
-    { pkgs, ... }:
+    { pkgs, lib, ... }:
     {
       services.wivrn = {
         enable = true;
