@@ -1,7 +1,7 @@
 { lib, ... }:
 let
-  inherit (lib) mkDefault mkForce;
-  module' = { pkgs, ... }:{
+  inherit (lib) mkDefault;
+  module' = {
     hardware.nvidia = {
       open = false;
 
@@ -13,9 +13,6 @@ let
     };
     services = {
       xserver.videoDrivers = [ "nvidia" ];
-      wivrn.package = pkgs.wivrn.override {
-        cudaSupport = true;
-      };
       ollama = {
         acceleration = "cuda";
       };
