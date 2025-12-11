@@ -185,7 +185,7 @@
       type = "github";
       owner = "notpeelz";
       repo = "WiVRn";
-      ref = "solarxr-patches";
+      ref = "refs/heads/solarxr-patches";
       flake = false;
     };
 
