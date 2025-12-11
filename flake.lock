@@ -1598,7 +1598,7 @@
       },
       "original": {
         "owner": "notpeelz",
-        "ref": "solarxr-patches",
+        "ref": "refs/heads/solarxr-patches",
         "repo": "WiVRn",
         "type": "github"
       }
