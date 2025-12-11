@@ -181,6 +181,14 @@
       flake = false;
     };
 
+    wivrn-custom = {
+      type = "github";
+      owner = "notpeelz";
+      repo = "WiVRn";
+      ref = "heads/solarxr-patches";
+      flake = false;
+    };
+
   };
 
   outputs =

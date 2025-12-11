@@ -1270,6 +1270,7 @@
         "stylix": "stylix",
         "tinted-schemes": "tinted-schemes_2",
         "vscode-server": "vscode-server",
+        "wivrn-custom": "wivrn-custom",
         "zen-browser": "zen-browser"
       }
     },
@@ -1582,6 +1583,23 @@
       "original": {
         "owner": "nix-community",
         "repo": "nixos-vscode-server",
+        "type": "github"
+      }
+    },
+    "wivrn-custom": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1765420316,
+        "narHash": "sha256-Nv6IWYZTSIum8am3FXE9agXvNQcuF35nxtFb7Q90FAc=",
+        "owner": "notpeelz",
+        "repo": "WiVRn",
+        "rev": "42d825883a409f4bd251e6072b549627aa4121cd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "notpeelz",
+        "ref": "heads/solarxr-patches",
+        "repo": "WiVRn",
         "type": "github"
       }
     },

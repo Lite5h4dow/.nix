@@ -1,12 +1,21 @@
-{ ... }:
+{ inputs, lib, ... }:
 {
-  flake.modules.nixos.vr = {
+  flake.modules.nixos.vr = {pkgs, ...}:
+  {
     services.wivrn = {
       enable = true;
       autoStart = true;
       highPriority = true;
       openFirewall = true;
       steam.importOXRRuntimes = true;
+
+      package = pkgs.wivrn.overrideAttrs (old: rec{
+        version = "42d825883a409f4bd251e6072b549627aa4121cd";
+        src = inputs.wivrn-custom;
+        cmakeFlags = old.cmakeFlags ++[
+          (lib.cmakeBool "WIVRN_FEATURE_SOLARXR" true)
+        ];
+      });
     };
   };
 }
