@@ -39,6 +39,7 @@
         "-DENABLE_CXX11=ON"
       	"-DENABLE_OPENGL=ON"
       	"-DENABLE_OPENCL=ON"
+      	"-DBUILD_STREAMER_RECORDER=ON"
       ];
 
       meta = {
