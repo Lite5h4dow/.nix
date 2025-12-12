@@ -7,10 +7,11 @@
       version = "0.2.1";
 
       src = pkgs.fetchFromGitHub {
-        owner = "OpenKinect";
+        owner = "dedsec995";
         repo = "libfreenect2";
-        rev = "v${version}";
-        sha256 = "sha256-v+NQiR9LTQOwr1kgVpGmFSSemiPw4rmdQE/B6ycoLpU=";
+        # rev = "v${version}";
+        # sha256 = "sha256-v+NQiR9LTQOwr1kgVpGmFSSemiPw4rmdQE/B6ycoLpU=";
+        rev = "master"
       };
 
       buildInputs = with pkgs; [
@@ -21,6 +22,7 @@
         libGLU
         libjpeg
         glfw
+        opencv
       ];
 
       nativeBuildInputs = with pkgs; [
@@ -39,13 +41,11 @@
         "-DENABLE_CXX11=ON"
       	"-DENABLE_OPENGL=ON"
       	"-DENABLE_OPENCL=ON"
-      	"-DBUILD_STREAMER_RECORDER=ON"
       ];
 
       meta = {
         description = "Drivers and libraries for the Xbox Kinect 2 (XBOne version)";
         homepage = "https://github.com/OpenKinect/libfreenect2";
-        
       };
     };
   };
