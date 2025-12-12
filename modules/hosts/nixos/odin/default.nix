@@ -35,7 +35,10 @@
         {
           networking.hostName = "odin";
           system.stateVersion = "25.11";
-          environment.systemPackages = [ config.flake.packages."x86_64-linux".freenect2 ];
+          environment.systemPackages = [
+            pkgs.linuxPackages.v4l2loopback
+            config.flake.packages."x86_64-linux".freenect2
+          ];
           services.udev.extraRules = ''
             # ATTR{product}=="Kinect2"
             SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", MODE="0666"
