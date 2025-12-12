@@ -36,6 +36,7 @@
         "-DCMAKE_BUILD_TYPE=Release"
         "-DBUILD_EXAMPLES=ON"
         "-DENABLE_CXX11=ON"
+      	"-DENABLE_OPENGL=ON"
       ];
 
       meta = {
