@@ -24,12 +24,16 @@
         libjpeg
         glfw
         opencv
-        linuxPackages.v4l2loopback
       ];
 
       nativeBuildInputs = with pkgs; [
         cmake
         pkg-config
+        linuxPackages.v4l2loopback
+      ];
+
+      depsBuildTarget = with pkgs;[
+        linuxPackages.v4l2loopback
       ];
 
       prePatch = ''
