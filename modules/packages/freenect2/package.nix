@@ -27,8 +27,15 @@
         pkg-config
       ];
 
+      prePatch = ''
+        sed -i -e '93aINSTALL(TARGETS Protonect DESTINATION bin)' "examples/CMakeLists.txt"
+      '';
+
       cmakeFlags = [
         "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+        "-DCMAKE_BUILD_TYPE=Release"
+        "-DBUILD_EXAMPLES=ON"
+        "-DENABLE_CXX11=ON"
       ];
 
       meta = {
