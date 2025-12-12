@@ -1,4 +1,4 @@
-{ inputs, config, flake, ... }:
+{ inputs, config, ... }:
 {
   flake.nixosConfigurations."odin" = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
@@ -35,7 +35,13 @@
         {
           networking.hostName = "odin";
           system.stateVersion = "25.11";
-          environment.systemPackages = [ flake.packages.freenect2 ];
+          environment.systemPackages = [ config.flake.packages."x86_64-linux".freenect2 ];
+          services.udev.extraRules = ''
+            # ATTR{product}=="Kinect2"
+            SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c4", MODE="0666"
+            SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d8", MODE="0666"
+            SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d9", MODE="0666"
+          '';
           home-manager.users.${config.flake.meta.user.name} = {
             wayland.windowManager.hyprland.settings = {
               monitor = [
