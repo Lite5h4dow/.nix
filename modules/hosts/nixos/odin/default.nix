@@ -9,7 +9,10 @@
       system = "x86_64-linux";
       stdenv.hostPlatform.system = "x86_64-linux";
     };
-    modules =
+    modules = let
+      username = config.flake.meta.user.name;
+      freenect2' = config.flake.packages."x86_64-linux".freenect2;
+      in
       with config.flake.modules.nixos;
       [
         desktop
@@ -32,12 +35,11 @@
         virtualisation
         cpu-amd
         gpu-nvidia
-        {
+        ({...}:{
           networking.hostName = "odin";
           system.stateVersion = "25.11";
-          boot.kernelPackages = with inputs.nixpkgs."x86_64-linux".linuxPackages; [ v4l2loopback ];
           environment.systemPackages = [
-            config.flake.packages."x86_64-linux".freenect2
+            freenect2'
           ];
           services.udev.extraRules = ''
             # ATTR{product}=="Kinect2"
@@ -45,7 +47,7 @@
             SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d8", MODE="0666"
             SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02d9", MODE="0666"
           '';
-          home-manager.users.${config.flake.meta.user.name} = {
+          home-manager.users.${username} = {
             wayland.windowManager.hyprland.settings = {
               monitor = [
                 "DP-1, 3440x1440@144, 0x0, 1"
@@ -53,7 +55,7 @@
               ];
             };
           };
-        }
+        })
       ];
   };
 }
