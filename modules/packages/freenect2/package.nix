@@ -1,25 +1,25 @@
 { ... }:
 {
-  perSystem = { stdenv, lib, pkgs, ...}:
+  perSystem = { lib, pkgs, ...}:
   {
-    packages.freenect2 = stdenv.mkDerivation rec{
+    packages.freenect2 = pkgs.stdenv.mkDerivation rec{
       pname = "freenect2";
       version = "0.2.1";
 
-      src = lib.fetchFromGitHub {
+      src = pkgs.fetchFromGitHub {
         owner = "OpenKinect";
         repo = "libfreenect2";
         rev = "v${version}";
-        sha = lib.fakeHash;
+        sha256 = "sha256-v+NQiR9LTQOwr1kgVpGmFSSemiPw4rmdQE/B6ycoLpU=";
       };
 
       buildInputs = with pkgs; [
         libusb1
         libGL
-        libXi
-        libXmu
+        libxi
+        libxmu
         libGLU
-        libglut
+        libjpeg
       ];
 
       nativeBuildInputs = with pkgs; [
@@ -27,9 +27,8 @@
         pkg-config
       ];
 
-      patchPhase = lib.concatMapStrings (x: ''substituteInPlace ${x} --replace "{GLUT_LIBRARY}" "{GLUT_LIBRARIES}"'') [
-        "examples/CMakeLists.txt"
-        "wrappers/cpp/CMakeLists.txt"
+      cmakeFlags = [
+        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
       ];
 
       meta = {

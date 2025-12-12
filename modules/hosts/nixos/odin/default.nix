@@ -1,4 +1,4 @@
-{ inputs, config, ... }:
+{ inputs, config, flake, ... }:
 {
   flake.nixosConfigurations."odin" = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
@@ -35,6 +35,7 @@
         {
           networking.hostName = "odin";
           system.stateVersion = "25.11";
+          environment.systemPackages = [ flake.packages.freenect2 ];
           home-manager.users.${config.flake.meta.user.name} = {
             wayland.windowManager.hyprland.settings = {
               monitor = [
