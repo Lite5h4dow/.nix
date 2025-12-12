@@ -20,6 +20,7 @@
         libxmu
         libGLU
         libjpeg
+        glfw
       ];
 
       nativeBuildInputs = with pkgs; [
@@ -37,6 +38,7 @@
         "-DBUILD_EXAMPLES=ON"
         "-DENABLE_CXX11=ON"
       	"-DENABLE_OPENGL=ON"
+      	"-DENABLE_OPENCL=ON"
       ];
 
       meta = {
