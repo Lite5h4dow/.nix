@@ -36,7 +36,7 @@
           networking.hostName = "odin";
           system.stateVersion = "25.11";
           environment.systemPackages = [
-            pkgs.linuxPackages.v4l2loopback
+            inputs.nixpkgs.legacyPackages."x86_64-linux".linuxPackages.v4l2loopback
             config.flake.packages."x86_64-linux".freenect2
           ];
           services.udev.extraRules = ''
