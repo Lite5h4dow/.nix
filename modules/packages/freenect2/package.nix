@@ -11,7 +11,8 @@
         repo = "libfreenect2";
         # rev = "v${version}";
         # sha256 = "sha256-v+NQiR9LTQOwr1kgVpGmFSSemiPw4rmdQE/B6ycoLpU=";
-        rev = "master"
+        rev = "master";
+        sha256 = "sha256-jdzj3hRbHdVGbWHfgW5jGJLxr8ENCYuBi855qAV+uc4=";
       };
 
       buildInputs = with pkgs; [
@@ -23,6 +24,7 @@
         libjpeg
         glfw
         opencv
+        linuxPackages.v4l2loopback
       ];
 
       nativeBuildInputs = with pkgs; [
