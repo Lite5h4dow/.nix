@@ -4,7 +4,7 @@
   {
     programs.yt-dlp = {
       enable = true;
-      config = {
+      settings = {
         cookies-from-browser = "firefox:~/.zen";
       };
     };
