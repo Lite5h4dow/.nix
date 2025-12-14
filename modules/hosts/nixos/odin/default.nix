@@ -30,6 +30,7 @@
         gamesdev
         networking
         mullvad
+        mullvad-ui
         wireless
         bluetooth
         graphics
