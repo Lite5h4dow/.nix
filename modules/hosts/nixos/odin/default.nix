@@ -29,6 +29,7 @@
         dev-extras
         gamesdev
         networking
+        mullvad
         wireless
         bluetooth
         graphics
