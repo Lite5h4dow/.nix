@@ -11,5 +11,11 @@
         pulumi-bin
       ];
     };
+    extra = { pkgs, ... }:
+    {
+      home.packages = with pkgs; [
+        ffmpeg
+      ];
+    };
   };
 }
