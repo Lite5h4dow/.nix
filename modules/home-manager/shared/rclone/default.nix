@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   flake.modules.homeManager.base.programs.rclone = {
     enable = true;
@@ -12,8 +13,7 @@
         mounts = {
           "/" = {
             enable = true;
-            # mountPoint = "/home/${user.username}/filestore";
-            mountPoint = "/home/share";
+            mountPoint = "/home/${config.flake.meta.user.name}/filestore";
             options = {
               dir-cache-time = "30s";
               poll-interval = "5s";
